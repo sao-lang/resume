@@ -1,0 +1,17 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "黄根亮简历 — Typst 排版",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch",
+    "build:pdf": "node build.js",
+    "build:ps1": "powershell -File build.ps1",
+    "build:template": "typst compile resume-template.typ resume-template.pdf",
+    "clean": "del resume.pdf resume-template.pdf 2>nul || rm -f resume.pdf resume-template.pdf"
+  },
+  "keywords": ["resume", "typst"],
+  "license": "MIT"
+}
